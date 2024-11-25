@@ -8,8 +8,8 @@ css: Misc/style.css
 ---
 
 <div class="banner">
-  <h1>REPRODUCIBLE RESEARCH:</h1>
-  <h2>Organizing Your R Project: Best Practices for Reproducible Ecology Research</h2>
+  <h1>DATA VISUALISATION:</h1>
+  <h2>CONCAVE HULLS AND HEXAGONAL GRID MAPS</h2>
 </div>
 
 _Created by Klara Gjendem - November 2024_

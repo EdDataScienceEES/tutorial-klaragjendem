@@ -1,20 +1,11 @@
-
 ---
-output:
-  html_document: default
-  word_document: default
-  pdf_document: default
-css: Misc/style.css
+layout: tutorial
+title: "Organizing Your R Project: Best Practices for Reproducible Ecology Research"
+subtitle: 
+date: 2024-11-13
+author: Klara Gjendem Ochoa
+tags:
 ---
-
-<div class="banner">
-  <h1>REPRODUCIBLE RESEARCH:</h1>
-  <h2>Organizing Your R Project: Best Practices for Reproducible Ecology Research</h2>
-</div>
-
-_Created by Klara Gjendem - November 2024_
-
---------
 
 # Tutorial Aims:
 
