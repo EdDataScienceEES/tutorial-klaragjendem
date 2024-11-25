@@ -17,7 +17,7 @@ _Created by Klara Gjendem - November 2024_
 
 # Tutorial Aims:
 
-1. Understand the importance of organizing your R project for reproducibility.
+1. Understand the importance of organizing your R project for reproducibility. HOLAAAAA
 2. Manage dependencies and package versions with the `renv` package.
 3. Set up project-specific settings in RStudio to streamline workflows.
 4. Create a clear and accessible README file to provide context and instructions.
