@@ -5,10 +5,11 @@ file.rename(from = "style.css", to = "Misc/style.css")
 file.rename(from = "nc_file_bylakeid.ipynb", to = "Misc/nc_file_bylakeid.ipynb")
 file.rename(from = "LICENSE", to = "Misc/LICENSE")
 file.rename(from = ".gitignore", to = "Misc/.gitignore")
-file.rename(from = "tut_template.html", to = "Misc/tut_template.html")
-file.rename(from = "tut_template.md", to = "Misc/tut_template.md")
+#file.rename(from = "tut_template.html", to = "Misc/tut_template.html")
+#file.rename(from = "tut_template.md", to = "Misc/tut_template.md")
 
-
+dir.create("figures")
+file.rename(from = "banner.jpg", to = "figures/banner.jpg")
 
 
 

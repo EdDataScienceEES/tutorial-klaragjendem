@@ -3,7 +3,7 @@
     "path": "~/Documents/Documents – Klara’s MacBook Air/UNIVERSITY/YEAR 4/SEM 1/DATA SCIENCE IN EES/tutorial-klaragjendem/Tutorial_script.R",
     "project_path": "Tutorial_script.R",
     "type": "r_source",
-    "hash": "51129420",
+    "hash": "2834707899",
     "contents": "",
     "dirty": false,
     "created": 1731526197524.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "11,0",
-        "scrollLine": "0"
+        "cursorPosition": "8,1",
+        "scrollLine": "1"
     },
     "folds": "",
-    "lastKnownWriteTime": 1732551212,
+    "lastKnownWriteTime": 1732554145,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1732551212502,
+    "last_content_update": 1732554145673,
     "read_only": false,
     "read_only_alternatives": []
 }
