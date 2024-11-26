@@ -1,41 +1,45 @@
-This is the link to the tutorial: https://eddatascienceees.github.io/tutorial-klaragjendem/
+# Coding Club Organizing Your R Project: Best Practices for Reproducible Ecology Research
+
+### The aim of this tutorial is to provide best practices for organizing, automating, and documenting R projects to ensure reproducibility and efficiency in ecological and data science research.
+
+You can check out the full tutorial online here https://eddatascienceees.github.io/tutorial-klaragjendem/
+
+
+----
+
+Building on the principles introduced in the [Reproducible Research Tutorials](https://ourcodingclub.github.io/tutorials.html) by **Coding Club**, this tutorial explores best practices for organizing, automating, and documenting R projects to enhance reproducibility and efficiency in ecological and data science research. It serves as a foundation to help you structure your research effectively, so you never have to worry about whether your project is organized correctly again!
+
+### Prerequisites
+
+While this tutorial is of basic to intermediate difficulty, we recommend learners first checking the [Getting started with R and RStudio](https://ourcodingclub.github.io/tutorials/intro-to-r/) and [Intro to GitHub for version control](https://ourcodingclub.github.io/tutorials/git/), which will give you basic knowledge on:
+
+- **How R and RStudio work**
+
+- **What version control is and how to use `git`and GitHub**.
 
 
 
+### What you will learn
+
+In this tutorial, we will explore the essential steps to organize and manage an R project for reproducibility and efficiency. Here's a recap of what we will cover:
+
+- **Setting Up Your Project**: Learn how to create and initialize an RStudio project as a foundation for organizing your work.
+
+- **Setting Up a Consistent Folder Structure for Reproducibility**: Understand the importance of having a clear and logical folder organization to avoid confusion and improve workflow. Practice creating directories for key components of a project, such as data, scripts, outputs, and documentation, ensuring files are easy to locate and maintain.
+
+- **Managing Dependencies and Package Versions with `renv`**: Learn how to use the `renv` package to create a reproducible project environment. Set up and activate `renv` to lock package versions, enabling consistent analysis even as R packages evolve.
+
+- **Automating Your Data Cleaning and Analysis Pipeline**: Explore how to automate repetitive tasks using R scripts, saving time and reducing the risk of errors. Learn to document workflows effectively to ensure others (and your future self) can easily follow the steps.
+
+- **Creating a Clear and Accessible README File**: Discuss the components of a professional README file, including how to provide clear context, usage instructions, and essential project details for collaborators and users.
+
+By following these steps, you will have the tools and knowledge to build and maintain R projects that are well-organized, reproducible, and easy to share or revisit. These best practices will save you time and effort in the long run while ensuring your work is accessible and understandable to others.
 
 
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/6eRt7-90)
-# tutorial-instructions
-## Instructions for Tutorial Assignment
+----
 
-The key final assignment for the Data Science course is to create your own tutorial. Your tutorial has to communicate a specific quantitative skill - you can choose the level at which you pitch your tutorial and how advanced or introductory it is. You can create "part 2" tutorials where "part 1" is an existing Coding Club tutorial.
+#### If you have any questions about completing this tutorial, please contact us on ourcodingclub@gmail.com
 
-You are encouraged to add your peers to your tutorial development repositories so that you can exchange feedback - remember that the best way to check if your tutorial makes sense is to have someone that is not you go through it.
+Check out https://ourcodingclub.github.io/workshop/ to learn how you can get involved!
 
-__Note that the deadline for this challenge is 12pm on 28th November 2024. Submission is via GitHub like with previous challenges, but you have to also submit a pdf version of your tutorial via Turnitin before 12pm on 28th November 2024. Your submission on GitHub will represent a repository that is also a website (the tutorial on making tutorials below explains how to turn a GitHub repo into a website) and you can just save a pdf of your website using `File/Export as pdf` when you've opened your repository website, you don't need to be separately generating a pdf through code unless you want to.__
-
-__Marking criteria:__
-
-•	Topic – A relevant topic and content that is appropriate for a Coding Club tutorial and relevant to the field of data science, plus appropriate for learners at a particular skill level - at least 4th year Environmental / Ecological science student. - 25%
-
-•	Structure – Clear and logical structure to the tutorial that is easy to navigate with clear instructions. Clear, concrete and measurable learning objectives (i.e., people can tell exactly what they are learning and when they have achieved each learning objective). - 25%
-
-•	Reproducibility – People can do the tutorial on their own, without assistance and without needing to pay for extra software, the code works and people can easily access any data needed to complete the tutorial. - 25%
-
-•	Creativity – A well-illustrated, professionally designed tutorial with appropriate figures and diagrams. A creative and engaging approach to teaching the learning objectives. - 25%
-
-__Useful links:__
-- https://ourcodingclub.github.io/tutorials/tutorials/ - Coding Club tutorial on how to make tutorials
-- https://ourcodingclub.github.io/tutorials/ - all the other Coding Club tutorials
-- https://github.com/ourcodingclub/ourcodingclub.github.io - the repository behind the Coding Club website - here you can see the Markdown code for how the tutorials were formatted
-- https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf - markdown cheatsheet
-
-__Absolute top of the class examples of tutorials made by DS students:__
-- https://ourcodingclub.github.io/tutorials/data-manip-creative-dplyr/ - Advanced data manipulation: Creative use of diverse dplyr functions by Jakub Wieczorkowski
-- https://ourcodingclub.github.io/tutorials/data-scaling/ - Transforming and scaling data by Matus Seci
-- https://ourcodingclub.github.io/tutorials/anova/ - ANOVA from A to (XY)Z by Erica Zaja
-- https://ourcodingclub.github.io/tutorials/spatial-vector-sf/ - Geospatial vector data in R with sf by Boyan Karabaliev
-- https://eddatascienceees.github.io/tutorial-assignment-beverlytan/ - Creating a repository with a clear structure by Beverly Tan
-- https://ourcodingclub.github.io/tutorials/spatial/ - Intro to Spatial Analysis in R by Maude Grenier
-
-All the other useful links we have shared with previous challenges and from the course reading - think of the tutorials you have done in the past - what did you like about those tutorials, what didn't work so well and could be improved.
+#### <a href="https://www.surveymonkey.co.uk/r/X7VHQ6S">We would love to hear your feedback on the tutorial, whether you did it at a Coding Club workshop or online!</a>

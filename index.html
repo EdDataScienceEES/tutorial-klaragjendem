@@ -407,8 +407,6 @@ Research
 reproducibility.</li>
 <li>Manage dependencies and package versions with the <code>renv</code>
 package.</li>
-<li>Set up project-specific settings in RStudio to streamline
-workflows.</li>
 <li>Create a clear and accessible README file to provide context and
 instructions.</li>
 <li>Automate data cleaning and analysis pipelines for efficiency and
@@ -462,8 +460,8 @@ can follow your process</a></h5>
 <h3><a href="#section5"> 5. Create a clear and accessible README
 file</a></h3>
 </div>
-<div id="challenge-yourself-file" class="section level3">
-<h3><a href="#section6"> 6. Challenge Yourself! file</a></h3>
+<div id="what-we-have-learned" class="section level3">
+<h3><a href="#section6"> 6. What we have learned </a></h3>
 </div>
 <div id="introduction-1" class="section level2">
 <h2>1. Introduction</h2>
@@ -566,9 +564,9 @@ projects, a standard structure helps everyone understand where files are
 and what each folder contains, making teamwork smoother.</p>
 </div>
 <div id="learn-how-to-create-directories-for-data-scripts-outputs-and-documentation-1" class="section level3">
-<h3>1.2 Learn how to create directories for data, scripts, outputs, and
+<h3>2.2 Learn how to create directories for data, scripts, outputs, and
 documentation</h3>
-<p><a name="subsection2"></a></p>
+<p><a name="subsection4"></a></p>
 <div id="suggested-folder-structure" class="section level4">
 <h4>Suggested Folder Structure:</h4>
 <p>Once you choose a specific structure depending on project needs, it
@@ -731,8 +729,120 @@ keep the lock file up to date.</p></li>
 </div>
 </div>
 </div>
+<div id="automate-your-data-cleaning-and-analysis-pipeline-1" class="section level2">
+<h2>4. Automate your data cleaning and analysis pipeline</h2>
+<p><a name="section4"></a></p>
+<p>Automating data cleaning and analysis tasks streamlines your
+workflow, saving time and minimizing errors by ensuring each step is
+applied consistently. It enhances reproducibility by allowing others to
+follow a single script rather than manually performing individual steps.
+With a fully automated pipeline, you can execute the entire process with
+a single command, making it simple to verify results or rerun analyses
+when new data becomes available.</p>
+<div id="structuring-your-pipeline" class="section level4">
+<h4>Structuring Your Pipeline</h4>
+<ul>
+<li><p><strong>Separate Scripts for Different Tasks</strong>: It’s
+helpful to organize your pipeline by creating separate scripts for
+distinct stages, such as data cleaning, analysis, and visualization.
+This modular approach makes it easier to troubleshoot specific stages
+and understand the workflow.</p></li>
+<li><p><strong>Suggested script organization</strong>:</p>
+<ul>
+<li><code>data_cleaning.R</code> – Loads raw data, cleans, and
+preprocesses it for analysis.</li>
+<li><code>analysis.R</code> – Performs the main statistical
+analysis.</li>
+<li><code>visualization.R</code> – Generates visualizations based on
+analysis results.</li>
+</ul></li>
+<li><p><strong>Using <code>source()</code> to Chain Scripts
+Together</strong>: Use <code>source(&quot;script_name.R&quot;)</code> to run one
+script from another. For example, if <code>analysis.R</code> requires
+clean data, you can start <code>analysis.R</code> with
+<code>source(&quot;data_cleaning.R&quot;)</code> to ensure it’s always using the
+latest cleaned data.</p></li>
+</ul>
+<p>Example:</p>
+<pre class="markdown"><code># In analysis.R
+source(&quot;data_cleaning.R&quot;)
+# Continue with analysis</code></pre>
+</div>
+<div id="use-r-scripts-to-automate-repetitive-tasks-1" class="section level3">
+<h3>4.1 Use R scripts to automate repetitive tasks</h3>
+<p><a name="subsection6"></a></p>
+<div id="automating-with-make-or-custom-r-scripts" class="section level4">
+<h4>Automating with <code>Make</code> or Custom R Scripts</h4>
+<ul>
+<li><strong>Using a <code>Makefile</code> (Optional)</strong>: If you’re
+comfortable with command-line tools, a <code>Makefile</code> can
+automate complex workflows by specifying dependencies and execution
+order. A <code>Makefile</code> can be especially useful in larger
+projects with multiple datasets or analysis steps.</li>
+</ul>
+<p>Example <code>Makefile</code> snippet:</p>
+<pre class="makefile"><code>all: analysis
+
+analysis: data_cleaning.R analysis.R
+    Rscript data_cleaning.R
+    Rscript analysis.R</code></pre>
+<ul>
+<li><strong>Automating with a Master Script in R</strong>:</li>
+</ul>
+<p>For simpler workflows, a master R script can sequentially call each
+part of the pipeline. This script serves as a single entry point for the
+entire analysis, making it easy to rerun the analysis from start to
+finish.</p>
+<p>Example <code>main.R</code>:</p>
+<pre class="r"><code># Master script for entire workflow
+source(&quot;data_cleaning.R&quot;)
+source(&quot;analysis.R&quot;)
+source(&quot;visualization.R&quot;)</code></pre>
+</div>
+<div id="using-functions-for-repetitive-tasks" class="section level4">
+<h4>Using Functions for Repetitive Tasks</h4>
+<p>Create Custom Functions: Identify repetitive tasks (like data
+transformation or summary statistics) and create functions for them.
+This makes your code more modular and easier to understand.</p>
+<p>Example:</p>
+<pre class="r"><code># Define a function for common data cleaning steps
+clean_data &lt;- function(data) {
+  data %&gt;%
+    filter(!is.na(variable)) %&gt;%
+    mutate(variable = as.factor(variable))
+}</code></pre>
+</div>
+<div id="tips-for-maintaining-an-automated-pipeline" class="section level4">
+<h4>Tips for Maintaining an Automated Pipeline</h4>
+<ul>
+<li><p><strong>Test Each Step Individually</strong>: Run each script
+separately to confirm it works before integrating it into the main
+pipeline.</p></li>
+<li><p><strong>Use Clear Naming Conventions</strong>: Name your scripts
+descriptively (<code>data_cleaning.R</code>, <code>analysis.R</code>,
+etc.) to make the process easy to follow.</p></li>
+<li><p><strong>Document Each Script</strong>: Include comments or a
+brief description at the start of each script to explain its role in the
+pipeline.</p></li>
+</ul>
+</div>
+</div>
+<div id="document-your-workflow-to-ensure-others-can-follow-your-process-1" class="section level3">
+<h3>4.2 Document your workflow to ensure others can follow your
+process</h3>
+<p><a name="subsection7"></a></p>
+<p>Be very consistent in your commits, or comments within the code,
+stating what you are doing and why so that others can easily follow your
+process. Imagine you are the one having to continue the work someone
+else started, opening many different files with no comments on them
+whatsoever, it would take you ages to catch up on what the person in
+front of you did. This is a lot of time and energy going to waste, and
+none of us has that! So keep this in mind throughout your entire
+work.</p>
+</div>
+</div>
 <div id="create-a-clear-and-accessible-readme-file-1" class="section level2">
-<h2>4. Create a clear and accessible README file</h2>
+<h2>5. Create a clear and accessible README file</h2>
 <p><a name="section5"></a></p>
 <p>A README file serves as a crucial introduction to your project,
 offering essential context and acting as the go-to resource for
@@ -840,116 +950,42 @@ Brief summary of findings.
 For questions, reach out to [Your Name](mailto:your.email@example.com).</code></pre>
 </div>
 </div>
-<div id="automate-your-data-cleaning-and-analysis-pipeline-1" class="section level2">
-<h2>5. Automate your data cleaning and analysis pipeline</h2>
+<div id="what-we-have-learned-1" class="section level2">
+<h2>6. What we have learned</h2>
 <p><a name="section6"></a></p>
-<p>Automating data cleaning and analysis tasks streamlines your
-workflow, saving time and minimizing errors by ensuring each step is
-applied consistently. It enhances reproducibility by allowing others to
-follow a single script rather than manually performing individual steps.
-With a fully automated pipeline, you can execute the entire process with
-a single command, making it simple to verify results or rerun analyses
-when new data becomes available.</p>
-<div id="structuring-your-pipeline" class="section level4">
-<h4>Structuring Your Pipeline</h4>
+<p>In this tutorial, we explored the essential steps to organize and
+manage an R project for reproducibility and efficiency. Here’s a recap
+of what we covered:</p>
 <ul>
-<li><p><strong>Separate Scripts for Different Tasks</strong>: It’s
-helpful to organize your pipeline by creating separate scripts for
-distinct stages, such as data cleaning, analysis, and visualization.
-This modular approach makes it easier to troubleshoot specific stages
-and understand the workflow.</p></li>
-<li><p><strong>Suggested script organization</strong>:</p>
-<ul>
-<li><code>data_cleaning.R</code> – Loads raw data, cleans, and
-preprocesses it for analysis.</li>
-<li><code>analysis.R</code> – Performs the main statistical
-analysis.</li>
-<li><code>visualization.R</code> – Generates visualizations based on
-analysis results.</li>
-</ul></li>
-<li><p><strong>Using <code>source()</code> to Chain Scripts
-Together</strong>: Use <code>source(&quot;script_name.R&quot;)</code> to run one
-script from another. For example, if <code>analysis.R</code> requires
-clean data, you can start <code>analysis.R</code> with
-<code>source(&quot;data_cleaning.R&quot;)</code> to ensure it’s always using the
-latest cleaned data.</p></li>
+<li><p><strong>Setting Up Your Project</strong>: Learned how to create
+and initialize an RStudio project as a foundation for organizing your
+work.</p></li>
+<li><p><strong>Setting Up a Consistent Folder Structure for
+Reproducibility</strong>: Understood the importance of having a clear
+and logical folder organization to avoid confusion and improve workflow.
+Practiced creating directories for key components of a project, such as
+data, scripts, outputs, and documentation, ensuring files are easy to
+locate and maintain.</p></li>
+<li><p><strong>Managing Dependencies and Package Versions with
+<code>renv</code></strong>: Learned how to use the <code>renv</code>
+package to create a reproducible project environment. Set up and
+activated <code>renv</code> to lock package versions, enabling
+consistent analysis even as R packages evolve.</p></li>
+<li><p><strong>Automating Your Data Cleaning and Analysis
+Pipeline</strong>: Explored how to automate repetitive tasks using R
+scripts, saving time and reducing the risk of errors. Learned to
+document workflows effectively to ensure others (and your future self)
+can easily follow the steps.</p></li>
+<li><p><strong>Creating a Clear and Accessible README File</strong>:
+Discussed the components of a professional README file, including how to
+provide clear context, usage instructions, and essential project details
+for collaborators and users.</p></li>
 </ul>
-<p>Example:</p>
-<pre class="markdown"><code># In analysis.R
-source(&quot;data_cleaning.R&quot;)
-# Continue with analysis</code></pre>
-</div>
-<div id="use-r-scripts-to-automate-repetitive-tasks-1" class="section level3">
-<h3>6.1 Use R scripts to automate repetitive tasks</h3>
-<p><a name="subsection8"></a></p>
-<div id="automating-with-make-or-custom-r-scripts" class="section level4">
-<h4>Automating with <code>Make</code> or Custom R Scripts</h4>
-<ul>
-<li><strong>Using a <code>Makefile</code> (Optional)</strong>: If you’re
-comfortable with command-line tools, a <code>Makefile</code> can
-automate complex workflows by specifying dependencies and execution
-order. A <code>Makefile</code> can be especially useful in larger
-projects with multiple datasets or analysis steps.</li>
-</ul>
-<p>Example <code>Makefile</code> snippet:</p>
-<pre class="makefile"><code>all: analysis
-
-analysis: data_cleaning.R analysis.R
-    Rscript data_cleaning.R
-    Rscript analysis.R</code></pre>
-<ul>
-<li><strong>Automating with a Master Script in R</strong>:</li>
-</ul>
-<p>For simpler workflows, a master R script can sequentially call each
-part of the pipeline. This script serves as a single entry point for the
-entire analysis, making it easy to rerun the analysis from start to
-finish.</p>
-<p>Example <code>main.R</code>:</p>
-<pre class="r"><code># Master script for entire workflow
-source(&quot;data_cleaning.R&quot;)
-source(&quot;analysis.R&quot;)
-source(&quot;visualization.R&quot;)</code></pre>
-</div>
-<div id="using-functions-for-repetitive-tasks" class="section level4">
-<h4>Using Functions for Repetitive Tasks</h4>
-<p>Create Custom Functions: Identify repetitive tasks (like data
-transformation or summary statistics) and create functions for them.
-This makes your code more modular and easier to understand.</p>
-<p>Example:</p>
-<pre class="r"><code># Define a function for common data cleaning steps
-clean_data &lt;- function(data) {
-  data %&gt;%
-    filter(!is.na(variable)) %&gt;%
-    mutate(variable = as.factor(variable))
-}</code></pre>
-</div>
-<div id="tips-for-maintaining-an-automated-pipeline" class="section level4">
-<h4>Tips for Maintaining an Automated Pipeline</h4>
-<ul>
-<li><p><strong>Test Each Step Individually</strong>: Run each script
-separately to confirm it works before integrating it into the main
-pipeline.</p></li>
-<li><p><strong>Use Clear Naming Conventions</strong>: Name your scripts
-descriptively (<code>data_cleaning.R</code>, <code>analysis.R</code>,
-etc.) to make the process easy to follow.</p></li>
-<li><p><strong>Document Each Script</strong>: Include comments or a
-brief description at the start of each script to explain its role in the
-pipeline.</p></li>
-</ul>
-</div>
-</div>
-<div id="document-your-workflow-to-ensure-others-can-follow-your-process-1" class="section level3">
-<h3>6.2 Document your workflow to ensure others can follow your
-process</h3>
-<p><a name="subsection9"></a></p>
-<p>Be very consistent in your commits, or comments within the code,
-stating what you are doing and why so that others can easily follow your
-process. Imagine you are the one having to continue the work someone
-else started, opening many different files with no comments on them
-whatsoever, it would take you ages to catch up on what the person in
-front of you did. This is a lot of time and energy going to waste, and
-none of us has that! So keep this in mind throughout your entire
-work.</p>
+<p>By following these steps, you now have the tools and knowledge to
+build and maintain R projects that are well-organized, reproducible, and
+easy to share or revisit. These best practices will save you time and
+effort in the long run while ensuring your work is accessible and
+understandable to others.</p>
 <hr>
 <div id="check-out-our-useful-links-page-where-you-can-find-loads-of-guides-and-cheatsheets." class="section level4">
 <h4>Check out our
@@ -972,7 +1008,6 @@ coding adventures on Twitter! <i class="fa fa-twitter"></i></a>
 </h3>
 </li>
 </ul>
-</div>
 </div>
 </div>
 </div>

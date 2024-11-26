@@ -13,6 +13,10 @@ file.rename(from = "banner.jpg", to = "figures/banner.jpg")
 
 dir.create("README")
 file.rename(from = "README.md", to = "README/README.md")
+file.rename(from = "README.html", to = "README/README.html")
+file.rename(from = "README/README.html", to = "README.html")
+file.rename(from = "README/README.md", to = "README.md")
+
 file.rename(from = "Misc/tut_template.md", to = "tut_template.md")
 
 
