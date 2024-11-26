@@ -79,7 +79,7 @@ These tools will make your life easier when carrying out your research report.
 Imagine you are giving peer feedback to a classmate, or you are carrying out your own research project, and the first thing you see when you open the Repository is the following:
 
 <figure style="text-align: center;">
-    <img src="Unstructured folder.png" alt="Unorganized folder structure" width=70% style="display: block; margin: 0 auto;">
+    <img src="figures/Unstructured folder.png" alt="Unorganized folder structure" width=70% style="display: block; margin: 0 auto;">
     <figcaption>Unorganized folder structure</figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ It might take you some time to find where the README markdown file is, but it mi
 Now look at the following repository:
 
 <figure style="text-align: center;">
-    <img src="Structured folder.png" alt="Nice and organized folder structure" width=70% style="display: block; margin: 0 auto;">
+    <img src="figures/Structured folder.png" alt="Nice and organized folder structure" width=70% style="display: block; margin: 0 auto;">
     <figcaption>Nice and organized folder structure</figcaption>
 </figure>
 
