@@ -417,8 +417,8 @@ consistency.</li>
 <h1>Steps to Achieve Tutorial Aims:</h1>
 <div id="introduction" class="section level3">
 <h3><a href="#section1"> 1. Introduction</a></h3>
-<div id="prerequisites" class="section level5">
-<h5><a href="#subsection1"> 1.1 Prerequisites</a></h5>
+<div id="pre-requisites" class="section level5">
+<h5><a href="#subsection1"> 1.1 Pre-requisites</a></h5>
 </div>
 <div id="setting-up-your-project" class="section level5">
 <h5><a href="#subsection2"> 1.2 Setting up your project</a></h5>
@@ -481,7 +481,7 @@ understand, reproduce, and build upon your analysis without ambiguity or
 difficulty. It’s about creating a clear, standardized, and systematic
 framework for storing and managing files, code, and dependencies so that
 the project remains easy to navigate, execute, and share.</p>
-<div id="pre-requisites" class="section level3">
+<div id="pre-requisites-1" class="section level3">
 <h3>1.1 Pre-requisites</h3>
 <p><a name="subsection1"></a></p>
 <p>While this tutorial is of basic to intermediate difficulty, we
@@ -616,7 +616,7 @@ directory. Run this code on your script to try it out.</p>
 <code>green_turtle.jpg</code> from our directory to the folder called
 <code>figures</code>, we would do:</p>
 <pre class="r"><code># Move green_turtle.jpg to the figures folder
-file.rename(from = &quot;green_turtle.jpg&quot;, to = &quot;pictures/green_turtle.jpg&quot;)</code></pre>
+file.rename(from = &quot;green_turtle.jpg&quot;, to = &quot;figures/green_turtle.jpg&quot;)</code></pre>
 </div>
 <div id="tips-for-keeping-the-folder-structure-organized" class="section level4">
 <h4>Tips for Keeping the Folder Structure Organized</h4>
@@ -827,18 +827,45 @@ pipeline.</p></li>
 </ul>
 </div>
 </div>
-<div id="document-your-workflow-to-ensure-others-can-follow-your-process-1" class="section level3">
-<h3>4.2 Document your workflow to ensure others can follow your
-process</h3>
+<div id="document-your-workflow-to-ensure-reproducibility" class="section level3">
+<h3>4.2 Document your workflow to ensure reproducibility</h3>
 <p><a name="subsection7"></a></p>
-<p>Be very consistent in your commits, or comments within the code,
-stating what you are doing and why so that others can easily follow your
-process. Imagine you are the one having to continue the work someone
-else started, opening many different files with no comments on them
-whatsoever, it would take you ages to catch up on what the person in
-front of you did. This is a lot of time and energy going to waste, and
-none of us has that! So keep this in mind throughout your entire
-work.</p>
+<p>Effective documentation is crucial for ensuring that others can
+understand and build upon your work. Whether through consistent commits
+or comments within your code, clearly explain <strong>what you are doing
+and why</strong> at each step of your process.</p>
+<p>Imagine inheriting a project with multiple files, none of which have
+meaningful comments or documentation. It would take considerable time
+and effort to decipher the previous developer’s intentions and workflow.
+This scenario underscores the importance of proper documentation; it
+saves time, avoids frustration, and ensures seamless collaboration.</p>
+<p>Here are some key practices to keep in mind:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Consistent Commit Messages</strong>:
+<ul>
+<li>Use clear, descriptive commit messages that explain the changes
+made.</li>
+<li>Example: <code>Add data cleaning function for outlier removal</code>
+or <code>Fix bug in regression model initialization</code>.</li>
+</ul></li>
+<li><strong>Inline Code Comments</strong>:
+<ul>
+<li><p>Add concise comments to clarify complex or non-intuitive sections
+of your code.</p></li>
+<li><p>Example:</p>
+<pre class="r"><code># Normalize the population data to a 0-1 range for better comparison
+population_scaled &lt;- scale(population_data)</code></pre></li>
+</ul></li>
+<li><strong>Think Like Your Future Self</strong>:
+<ul>
+<li>Assume that someone else, or you months from now, will need to pick
+up your project. Write documentation that anticipates their questions
+and clarifies potential ambiguities.</li>
+</ul></li>
+</ol>
+<p>By making documentation a consistent part of your workflow, you
+ensure your work is not only reproducible but also valuable to others in
+your team or field.</p>
 </div>
 </div>
 <div id="create-a-clear-and-accessible-readme-file-1" class="section level2">

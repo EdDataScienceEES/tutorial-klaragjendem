@@ -9,7 +9,7 @@ You can check out the full tutorial online here https://eddatascienceees.github.
 
 Building on the principles introduced in the [Reproducible Research Tutorials](https://ourcodingclub.github.io/tutorials.html) by **Coding Club**, this tutorial explores best practices for organizing, automating, and documenting R projects to enhance reproducibility and efficiency in ecological and data science research. It serves as a foundation to help you structure your research effectively, so you never have to worry about whether your project is organized correctly again!
 
-### Prerequisites
+### Pre-requisites
 
 While this tutorial is of basic to intermediate difficulty, we recommend learners first checking the [Getting started with R and RStudio](https://ourcodingclub.github.io/tutorials/intro-to-r/) and [Intro to GitHub for version control](https://ourcodingclub.github.io/tutorials/git/), which will give you basic knowledge on:
 

@@ -25,7 +25,7 @@ _Created by Klara Gjendem - November 2024_
 # Steps to Achieve Tutorial Aims:
 
 ### <a href="#section1"> 1. Introduction</a>
-##### <a href="#subsection1"> 1.1 Prerequisites</a>
+##### <a href="#subsection1"> 1.1 Pre-requisites</a>
 ##### <a href="#subsection2"> 1.2 Setting up your project</a>
 ### <a href="#section2"> 2. Set up a consistent folder structure for reproducibility</a>
 ##### <a href="#subsection3"> 2.1 Understand the importance of a clear folder organization</a>
@@ -153,7 +153,7 @@ As an example, if we wanted to move the file `green_turtle.jpg` from our directo
 
 ```r
 # Move green_turtle.jpg to the figures folder
-file.rename(from = "green_turtle.jpg", to = "pictures/green_turtle.jpg")
+file.rename(from = "green_turtle.jpg", to = "figures/green_turtle.jpg")
 ```
 
 #### Tips for Keeping the Folder Structure Organized
@@ -300,10 +300,32 @@ clean_data <- function(data) {
 
 - **Document Each Script**: Include comments or a brief description at the start of each script to explain its role in the pipeline.
 
-### 4.2 Document your workflow to ensure others can follow your process
+### 4.2 Document your workflow to ensure reproducibility
 <a name="subsection7"></a>
 
-Be very consistent in your commits, or comments within the code, stating what you are doing and why so that others can easily follow your process. Imagine you are the one having to continue the work someone else started, opening many different files with no comments on them whatsoever, it would take you ages to catch up on what the person in front of you did. This is a lot of time and energy going to waste, and none of us has that! So keep this in mind throughout your entire work.
+Effective documentation is crucial for ensuring that others can understand and build upon your work. Whether through consistent commits or comments within your code, clearly explain **what you are doing and why** at each step of your process.
+
+Imagine inheriting a project with multiple files, none of which have meaningful comments or documentation. It would take considerable time and effort to decipher the previous developer's intentions and workflow. This scenario underscores the importance of proper documentation; it saves time, avoids frustration, and ensures seamless collaboration.
+
+Here are some key practices to keep in mind:
+
+1. **Consistent Commit Messages**:
+   - Use clear, descriptive commit messages that explain the changes made.
+   - Example: `Add data cleaning function for outlier removal` or `Fix bug in regression model initialization`.
+
+2. **Inline Code Comments**:
+   - Add concise comments to clarify complex or non-intuitive sections of your code.
+   - Example:  
+     ```R
+     # Normalize the population data to a 0-1 range for better comparison
+     population_scaled <- scale(population_data)
+     ```
+
+3. **Think Like Your Future Self**:
+   - Assume that someone else, or you months from now, will need to pick up your project. Write documentation that anticipates their questions and clarifies potential ambiguities.
+
+By making documentation a consistent part of your workflow, you ensure your work is not only reproducible but also valuable to others in your team or field.
+
 
 ## 5. Create a clear and accessible README file 
 <a name="section5"></a>
